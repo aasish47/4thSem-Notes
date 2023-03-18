@@ -1,0 +1,766 @@
+<?php
+
+// $name = 'aasish';
+// // echo 'Hello World',' ';
+// // // echo print 'hey';
+// // echo 'joe\'s invoice',' ';
+// // echo $name;
+// // print $name;
+
+// $x = 1;
+// // & refers to the reference 
+// $y = &$x;
+// $x = 5;
+// echo $y;
+
+// echo 'hello ',$name;
+// echo "hello {$name}";
+// echo 'hello '.$name;
+
+// vaariables
+
+// defined at runtime
+// define('STATUS_PAID','paid');
+// // echo defined('STATUS_PAID');
+// echo STATUS_PAID;
+
+// defined at compiletime
+// const STATUS_PAID = 'paid';
+// echo STATUS_PAID;
+
+
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script> -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .container {
+      border: 2px solid black;
+      /* height: 400px; */
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #659DBD;
+      color: white;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 8px;
+      font-family:'smokum' ;
+      background-image: url("https://c4.wallpaperflare.com/wallpaper/242/236/855/mountains-river-snow-forest-wallpaper-preview.jpg");
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* .cImg{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      } */
+    img {
+      width: 220px;
+      margin: auto;
+    }
+
+    .carousel {
+      border-right: 2px solid white;
+      border-left: 2px solid white;
+      border-radius: 4rem;
+      height: 300px;
+      width: 40%;
+      margin: auto;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .rightBox {
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+      border-radius: 2rem;
+      /* height: 300px; */
+      width: 100%;
+      /* margin-left: 14px; */
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      /* background-color: darkorange; */
+
+    }
+
+    .rb1,
+    .rb2 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .text {
+      width: 50%;
+      margin: 4px;
+    }
+
+    .subName {
+      color: white;
+      text-align: center;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    @media only screen and (max-width: 767px) {
+    /* CSS code for mobile devices goes here */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .container {
+      border: 2px solid black;
+      /* height: 400px; */
+    }
+
+    h1 {
+      text-align: center;
+      /* background-color: #659DBD; */
+      background-color: #8bcadc;
+      color: white;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 8px;
+      font-family:'smokum' ;
+      background-image: url("https://c4.wallpaperflare.com/wallpaper/242/236/855/mountains-river-snow-forest-wallpaper-preview.jpg");
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+
+    /* .cImg{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      } */
+    img {
+      width: 220px;
+      margin: auto;
+    }
+
+    .carousel {
+      border-right: 2px solid grey;
+      border-left: 2px solid grey;
+      border-radius: 4rem;
+      height: 300px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .rightBox {
+      border-top: 2px solid greenyellow ;
+      border-bottom: 2px solid greenyellow;
+      border-radius: 2rem;
+      /* height: 300px; */
+      width: 100%;
+      /* margin-left: 14px; */
+      display: flex;
+      flex-direction: column;
+      padding: 6px;
+      margin-top: 10px;
+    }
+
+    .rb1,
+    .rb2 {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 90%;
+    }
+
+    .text {
+      width: 100%;
+      margin: 4px;
+    }
+
+    .subName {
+      color: white;
+      text-align: center;
+    }
+
+    textarea {
+      resize: none;
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <h1>Notes</h1>
+  <div class="container">
+    <div class="box">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <!-- <li data-target="#myCarousel" data-slide-to="5"></li> -->
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <a href="https://drive.google.com/drive/folders/10UjIbo0ApuEWlBbspYo6YSPrcSio9DFd?usp=sharing" target="_blank">
+            <img class="cImg"src="https://rukminim1.flixcart.com/image/832/832/xif0q/book/m/w/f/java-coding-problems-original-imagkyznccfwggsz.jpeg?q=70" alt="CSW2" />
+            </a>
+            <div class="carousel-caption">
+              <h5>Computer Science Workshop II</h5>
+            </div>
+          </div>
+          <div class="item">
+            <a href="https://drive.google.com/drive/folders/1JKZS6kaH1b_m3XlE3lfK2ZnmlSOk0Gbh?usp=sharing" target="_blank">
+            <img class="cImg"
+              src="https://rukminim1.flixcart.com/image/832/832/book/6/4/3/algorithm-design-original-imadsn3fkjhxjzej.jpeg?q=70"
+              alt="AD2" />
+            </a>
+            <div class="carousel-caption">
+              <h5>Algorithm Design II</h5>
+            </div>
+          </div>
+          <div class="item">
+            <a href="https://drive.google.com/drive/folders/1vEJCok4DVez4GG6h8bjsq3ff3I_waBGC?usp=sharing" target="_blank">
+            <img class="cImg"
+              src="https://www1.alibris-static.com/computer-organization-and-architecture/isbn/9780134101613_l.jpg"
+              alt="COA" />
+            </a>
+            <div class="carousel-caption">
+              <h5>Computer Organisation and Architecture</h5>
+            </div>
+          </div>
+          <div class="item">
+            <a href="https://drive.google.com/drive/folders/1eJFOkZmmsEah52FHJEUvjCH0duXTFeHf?usp=sharing" target="_blank">
+            <img class="cImg" src="https://m.media-amazon.com/images/I/511MUkxPscL._SX386_BO1,204,203,200_.jpg"
+              alt="ALA" />
+            </a>
+            <div class="carousel-caption">
+              <h5>Applied Linear Algebra</h5>
+            </div>
+          </div>
+          <div class="item">
+            <a href="https://drive.google.com/drive/folders/1OxoPZcpVmaZKIzYmE1nwLaaopYyoumTv?usp=sharing " target="_blank" >
+            <img class="cImg"
+              src="https://m.media-amazon.com/images/I/51BvzA1KvNL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" alt="UHV" />
+            </a>
+            <div class="carousel-caption">
+              <h5>Universal Human values</h5>
+            </div>
+          </div>
+        </div>
+        <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+
+
+
+    <div class="rightBox">
+      <div class="rb1">
+        <div class="form-outline text">
+          <h5 class="subName">CSW II</h5>
+          <textarea class="form-control" id="textAreaExample1" rows="10">
+                      CHAPTER 1:
+                      ALGORITHMS ANALYSIS 
+                      INTRODUCTION 
+                      ASYMPTOTIC ANALYSIS 
+                      BIG-O NOTATION 
+                      OMEGA-Ω NOTATION 
+                      THETA-Θ NOTATION 
+                      COMPLEXITY ANALYSIS OF ALGORITHMS
+                      TIME COMPLEXITY ORDER
+                      DERIVING THE RUNTIME FUNCTION OF AN 
+                      TIME COMPLEXITY EXAMPLES
+                      MASTER THEOREM
+                      ARRAY BASED QUESTIONS
+                      RECURSIVE FUNCTION 
+                      EXERCISE
+
+                      CHAPTER 2: 
+                      APPROACH TO SOLVE ALGORITHM DESIGN
+                      PROBLEMS
+                      INTRODUCTION
+                      CONSTRAINTS
+                      IDEA GENERATION
+                      COMPLEXITIES
+                      CODING
+                      TESTING
+                      EXAMPLE
+                      SUMMARY
+
+                      CHAPTER 3: 
+                      ABSTRACT DATA TYPE & JAVA COLLECTIONS
+                      ABSTRACT DATA TYPE (ADT)
+                      DATA-STRUCTURE
+                      JAVA COLLECTION FRAMEWORK
+                      ARRAY
+                      LINKED LIST
+                      STACK
+                      QUEUE
+                      TREE
+                      BINARY TREE
+                      BINARY SEARCH TREES (BST)
+                      PRIORITY QUEUE (HEAP)
+                      HASH-TABLE
+                      DICTIONARY / SYMBOL TABLE
+                      GRAPHS
+                      GRAPH ALGORITHMS
+                      SORTING ALGORITHMS
+                      COUNTING SORT
+                      END NOTE
+
+                      CHAPTER 4: 
+                      SORTING
+                      INTRODUCTION
+                      TYPE OF SORTING
+                      BUBBLE-SORT
+                      MODIFIED (IMPROVED) BUBBLE-SORT
+                      INSERTION-SORT
+                      SELECTION-SORT
+                      MERGE-SORT
+                      QUICK-SORT
+                      QUICK SELECT
+                      BUCKET SORT
+                      GENERALIZED BUCKET SORT
+                      HEAP-SORT
+                      TREE SORTING
+                      EXTERNAL SORT (EXTERNAL MERGE-SORT)
+                      STABLE SORTING
+                      COMPARISONS OF THE VARIOUS SORTING ALGORITHMS.
+                      SELECTION OF BEST SORTING ALGORITHM
+                      PROBLEMS BASED ON SORTING
+                      EXERCISE
+
+                      CHAPTER 5: 
+                      SEARCHING
+                      INTRODUCTION
+                      WHY SEARCHING?
+                      DIFFERENT SEARCHING ALGORITHMS
+                      LINEAR SEARCH – UNSORTED INPUT
+                      LINEAR SEARCH – SORTED
+                      BINARY SEARCH
+                      STRING SEARCHING ALGORITHMS
+                      HASHING AND SYMBOL TABLES
+                      HOW SORTING IS USEFUL IN SELECTION ALGORITHM?
+                      PROBLEMS IN SEARCHING
+                      EXERCISE
+
+                      CHAPTER 6: 
+                      LINKED LIST
+                      INTRODUCTION
+                      LINKED LIST
+                      TYPES OF LINKED LIST
+                      SINGLY LINKED LIST
+                      DOUBLY LINKED LIST
+                      CIRCULAR LINKED LIST
+                      DOUBLY CIRCULAR LIST
+                      EXERCISE
+
+                      CHAPTER 7: 
+                      STACK
+                      INTRODUCTION
+                      THE STACK ABSTRACT DATA TYPE
+                      STACK USING ARRAY
+                      STACK USING ARRAY WITH MEMORY MANAGEMENT
+                      STACK USING LINKED LIST
+                      SYSTEM STACK AND METHOD CALLS
+                      PROBLEMS IN STACK
+                      USES OF STACK
+                      EXERCISE
+
+                      CHAPTER 8: 
+                      QUEUE
+                      INTRODUCTION
+                      THE QUEUE ABSTRACT DATA TYPE
+                      QUEUE USING ARRAY
+                      QUEUE USING LINKED LIST
+                      PROBLEMS IN QUEUE
+                      EXERCISE
+
+                      CHAPTER 9: 
+                      TREE
+                      INTRODUCTION
+                      TERMINOLOGY IN TREE
+                      BINARY TREE
+                      TYPES OF BINARY TREES
+                      PROBLEMS IN BINARY TREE
+                      BINARY SEARCH TREE (BST)
+                      PROBLEMS IN BINARY SEARCH TREE (BST)
+                      SEGMENT TREE
+                      AVL TREES
+                      RED-BLACK TREE
+                      SPLAY TREE
+                      B-TREE
+                      B+ TREE
+                      B* TREE
+                      EXERCISE
+
+                      CHAPTER 10: 
+                      PRIORITY QUEUE / HEAPS
+                      INTRODUCTION
+                      TYPES OF HEAP
+                      HEAP ADT OPERATIONS
+                      OPERATION ON HEAP
+                      HEAP-SORT
+                      USES OF HEAP
+                      PROBLEMS IN HEAP
+                      EXERCISE
+
+                      CHAPTER 11: 
+                      HASH-TABLE
+                      INTRODUCTION
+                      HASH-TABLE
+                      HASHING WITH SEPARATE CHAINING
+                      PROBLEMS IN HASHING
+                      EXERCISE
+
+                      CHAPTER 12: 
+                      GRAPHS
+                      INTRODUCTION
+                      GRAPH TERMINOLOGY
+                      GRAPH REPRESENTATION
+                      GRAPH TRAVERSALS
+                      DEPTH FIRST TRAVERSAL
+                      BREADTH FIRST TRAVERSAL
+                      USES OF BFS AND DFS
+                      DFS & BFS BASED PROBLEMS
+                      MINIMUM SPANNING TREES (MST)
+                      SHORTEST PATH ALGORITHMS IN GRAPH
+                      HAMILTONIAN PATH AND HAMILTONIAN CIRCUIT
+                      EULER PATH AND EULER CIRCUIT
+                      TRAVELLING SALESMAN PROBLEM (TSP)
+                      EXERCISE
+
+                      CHAPTER 13: 
+                      STRING ALGORITHMS
+                      INTRODUCTION
+                      STRING MATCHING
+                      DICTIONARY / SYMBOL TABLE
+                      PROBLEMS IN STRING
+                      EXERCISE
+
+                      CHAPTER 14: 
+                      ALGORITHM DESIGN TECHNIQUES
+                      INTRODUCTION
+                      BRUTE FORCE ALGORITHM
+                      GREEDY ALGORITHM
+                      DIVIDE-AND-CONQUER, DECREASE-AND-CONQUER
+                      DYNAMIC PROGRAMMING
+                      REDUCTION / TRANSFORM-AND-CONQUER
+                      BACKTRACKING
+                      BRANCH-AND-BOUND
+                      A* ALGORITHM
+                      CONCLUSION
+
+                      CHAPTER 15: 
+                      BRUTE FORCE ALGORITHM
+                      INTRODUCTION
+                      PROBLEMS IN BRUTE FORCE ALGORITHM
+                      CONCLUSION
+
+                      CHAPTER 16: 
+                      GREEDY ALGORITHM
+                      INTRODUCTION
+                      PROBLEMS ON GREEDY ALGORITHM
+
+                      CHAPTER 17: 
+                      DIVIDE-AND-CONQUER, DECREASE-AND-CONQUER
+                      INTRODUCTION
+                      GENERAL DIVIDE-AND-CONQUER RECURRENCE
+                      PROBLEMS ON DIVIDE-AND-CONQUER ALGORITHM
+
+                      CHAPTER 18: 
+                      DYNAMIC PROGRAMMING
+                      INTRODUCTION
+                      PROBLEMS ON DYNAMIC PROGRAMMING ALGORITHM
+
+                      CHAPTER 19: 
+                      BACKTRACKING
+                      INTRODUCTION
+                      PROBLEMS ON BACKTRACKING ALGORITHM
+
+                      CHAPTER 20: 
+                      COMPLEXITY THEORY
+                      INTRODUCTION
+                      DECISION PROBLEM
+                      COMPLEXITY CLASSES
+                      CLASS P PROBLEMS
+                      CLASS NP PROBLEMS
+                      CLASS CO-NP
+                      NP–HARD:
+                      NP–COMPLETE PROBLEMS
+                      REDUCTION
+                      END NOTE
+                    </textarea>
+        </div>
+        <div class="form-outline text">
+          <h5 class="subName">ALA</h5>
+          <textarea class="form-control" id="textAreaExample1" rows="10">
+                    CLASS NUMBER	TOPIC	SECTION	CLASS PROBLEMS	ASSIGNMENT PROBLEMS
+                    1	The Geometry of Linear Equations 	1.2	1.2(2,7)	1.2 (15,17)
+                    2	The Geometry of Linear Equations	1.2	1.2(8,11)	1.2(18,22)
+                    3	Gaussian Elimination	1.3	1.3(1,3,4,7)	1.3(9,10,12)
+                    4	Gaussian Elimination	1.3	1.3(8,14,16)	1.3(26,32)
+                    5	Matrix Notation and Matrix Multiplication	1.4	1.4(4,5,21)	1.4(11,28,56)
+                    6	Triangular Factors and Row Exchanges	1.5	1.5(2,7,11)	1.5(9,27,30)
+                    7	Triangular Factors and Row Exchanges	1.5	1.5(21,28)	1.5(9,32,40,41)
+                    8	Inverses and Transposes	1.6	1.6(6,10,11)	1.6(2,4,5,12)
+                    9	Inverses and Transposes	1.6	1.6(15,17,41,42)	1.6(37,52,54,58)
+                    10	Vector Spaces and Subspaces	2.1	2.1(2,4)	2.1(1,6,8)
+                    11	Vector Spaces and Subspaces	2.1	2.1(5,24)	2.1(26,28)
+                    12	Solving Ax = 0 and Ax = b	2.2	2.2(1,4,5)	2.2(7,12)
+                    13	Solving Ax = 0 and Ax = b	2.2	2,2(13, 34)	2.2(15,32)
+                    14	Solving Ax = 0 and Ax = b	2.2	2,2(44,54,59)	2.2(36,56)
+                    15	Linear Independence	2.3	2.3(1,3,5,8)	2.3(4,9,10)
+                    16	Basis, and Dimension	2.3	2.3(16)	2.3(13,31)
+                    17	Basis, and Dimension	2.3	2.3(19,23)	2.3(32,40)
+                    18	The Four Fundamental Subspaces	2.4	2.4(2,13)	2.4(3,6,11)
+                    19	The Four Fundamental Subspaces	2.4	2.4(18,24,29)	2.4(17,28,31,32)
+                    20	Orthogonal Vectors and Subspaces 	3.1	3.1(1,7,9,12)	3.1(2,10,11,18, 33)
+                    21	Cosines and Projections onto Lines 	3.2	3.2(1,3)	3.2(5,9)
+                    22	Cosines and Projections onto Lines 	3.2	3.2(8,17)	3.2(11,19)
+                    23	Projections and Least Squares 	3.3	3.3(1,4,)	3.3(2,9)
+                    24	Projections and Least Squares 	3.3	3.3(6,23)	3.3(12,24)
+                    25	Properties and Formulas of the Determinant	4.2	4.2 (4,5)	4.2 (2,6,13)
+                    26	 Applications of the Determinant	4.4	4.4(2,14,29)	4.4(5,7,27)
+                    27	Eigenvalues and Eigenvectors	5.1	5.1(1,2)	5.1(3,9)
+                    28	Eigenvalues and Eigenvectors	5.1	5.1(6,7)	5.1(10,11)
+                    29	Eigenvalues and Eigenvectors	5.1	5.1(15,17)	5.1(19,22,27,39)
+                    30	Diagonalization of a Matrix		5.2(8)	Matrix with  defect.
+                    31	Diagonalization of a Matrix	5.2	5.2(3,4,6)	5.2(8,12,16,32)
+                    32	Diagonalization of a Matrix		5.2 (16)	5.2 (17)
+                    33	Complex Matrices	5.5	5.5(1,2)	5.5(3,10)
+                    34	Complex Matrices	5.5	Theorems for Hermitian matrices	Theorems for Skew-Hermitian matrices
+                    35	Complex Matrices	5.5	5.5(15,33)	5.5(22,43)
+                    36	Tests for Positive Definiteness	6.2	6.2(1,3,11)	6.2(25,34)
+                    37	Singular Value Decomposition	6.3	6.3(1,4)	6.3(2,3)
+                    38	Singular Value Decomposition	6.3	6.3(14)	6.3(14)
+                    39	Matrix Norm and Condition Number	7.2	7.2(15,17)	7.2(2,10)
+                    40	Iterative Methods for Ax = b	7.4	7.4(2)	7.4(5)
+                    </textarea>
+        </div>
+      </div>
+      <div class="rb2">
+        <div class="form-outline text">
+          <h5 class="subName">COA</h5>
+          <textarea class="form-control" id="textAreaExample1" rows="10">
+          L1-L4 
+          Basic Concepts and Computer Evolution Chapter 1
+          Lect. 1. Organization and Architecture 1.1
+          Structure and Function 1.2
+          Lect. 2. A Brief History of Computers 1.3
+          Lect. 3. The Evolution of the Intel x86 Architecture Embedded Systems 1.4 1.5
+          ARM Architecture 1.6
+          Lect. 4. Cloud Computing 1.7
+
+          L5-L8 
+          Performance Issue Chapter 2
+          Lect. 5. Designing for Performance 2.1
+          Multicore, MICs, and GPGPUs
+          Two Laws that Provide Insight: Amdahl’s Law and Little’s Law 2.2 2.3
+          Lect. 6. Basic Measures of Computer Performance 2.4
+          Lect.7. Calculating the Mean
+          Lect.8. Problem Solving 2.5
+
+          L9-L14
+          A Top-Level View of Computer Function and Interconnection Chapter 3
+          Lect. 9 Computer Components 3.1
+          Computer Function 3.2
+          Lect. 10. Computer Function 3.2
+          Lect. 11. Interconnection Structures 3.3
+          Bus Interconnection 3.4
+          Lect. 12. Point-to-Point Interconnect 3.5
+          Lect. 13-14
+          PCI Express 3.6
+
+          L15-L19
+          Cache Memory Chapter 4
+          Lect. 15. Computer Memory System Overview 4.1
+          Lect. 16. Cache Memory Principles 4.2
+          Lect. 17.-19
+          Elements of Cache Design 4.3
+
+          L20-L21
+          Internal Memory Chapter 5
+          Semiconductor Main Memory 5.1
+          assignment
+          Lect. 20.-21
+          Error Correction 5.2
+          Newer Nonvolatile Solid-State Memory Technologies 5.3
+          5.4,5.5
+          assignment
+
+          L22-L25 
+          External Memory Chapter 6
+          Lect.22-23 RAID 6.2
+          Lect.24-25 Optical Memory 6.4
+          Magnetic Disk , Solid State Drives, Magnetic Tape assignment
+
+          L26-L28
+          Input/Output Chapter 7
+          Lect. 26 External Devices 7.1
+          I/O Modules 7.2
+          Programmed I/O 7.3
+          Lect. 27 Direct Memory Access 7.5
+          Lect. 28 Direct Cache Access 7.6
+
+          L29-L30
+          Operating System Support Chapter 8
+          Lecture Wise Lesson Planning 8.1
+          Lect.29 Operating System Overview
+          Scheduling 8.2
+          Lect.30 Memory Management 8.3
+
+          L31-L32
+          Reduced Instruction Set Computers Chapter 15
+          Lect.31 Instruction Execution Characteristics
+          The Use of a Large Register File
+          Compiler-Based Register Optimization
+          15.1
+          15.2
+          15.3
+
+          Lect.32 RISC Pipelining 15.5
+          Reduced Instruction Set Architecture, MIPS R4000 ,SPARC ,RISC versus CISC
+          Controversy
+          15.4,15.6,15.
+          7,15.8
+          (lab)
+
+          L33-L35
+          Parallel Processing Chapter 17
+          Lect.33 Multiple Processor Organizations 6
+          Symmetric Multiprocessors
+          17.1
+          17.2
+          Lect.34 Cache Coherence and the MESI Protocol
+          Multithreading and Chip Multiprocessors
+          17.3
+          17.4
+          Lect.35 Clusters
+          Non-uniform Memory Access
+          17.5
+          17.6
+
+          L36-L37
+          Multicore Computers Chapter 18
+          Lect.36 Hardware Performance Issues
+          Software Performance Issues
+          18.1
+          18.2
+          Lect.37 Multicore Organization
+          Heterogeneous Multicore Organization
+          18.3
+          18.4
+
+          L38-L39
+          ARITHMETIC AND LOGIC Chapter 9-11
+
+          L40 
+          Overview of 8086 Microprocessor and ARM Processor Chapter 12-14
+          </textarea>
+        </div>
+        <div class="form-outline text">
+          <h5 class="subName">AD II</h5>
+          <textarea class="form-control" id="textAreaExample1" rows="10">
+
+            </textarea>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- <?php
+    $servername = "127.0.0.1";
+    $username = "root";
+    $password = "Google_4466";
+    $databasename = "Notes";
+
+    $conn = new mysqli($servername, $username, $password, $databasename);
+    if ($conn->connect_error) {
+      die("connection failed" . $conn->connect_error);
+    }
+    echo "connected successfully";
+    ?> -->
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</body>
+
+</html>
